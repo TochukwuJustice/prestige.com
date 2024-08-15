@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-size: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: url(prestige.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center
+} 
+
+nav{
+    height: 80px;
+   
+    display:flex ;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav a{
+   
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: lightgray;
+    transition:.9s;
+    font-size: 1.1rem;
+}
+nav a:hover{
+    color: black;
+    transform: scale(1.1);
+}
+
+
+
+ nav .logo{
+    margin: 5px; 
+    color: rgba(211, 211, 211, 0.907);
+    transition: .9s;
+     
+   
+}  
+nav .logo:hover{
+    color: whitesmoke;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#sidebar{
+    display: none;
+}
+.open-sidebar,.close-sidebar{
+    display: none;
+    
+}
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+
+}
+.card{
+    background-color: black;
+    color: whitesmoke;
+    width:377px;
+    margin: 10px;
+    border-radius: 15px;
+   
+}
+.card-image{
+    height: 300px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+}
+.house-1{
+    background-image: url(house2.jpg);
+}
+
+.house-2{
+    background-image: url(house1.jpg);
+}
+
+.house-3{
+    background-image: url(house.jpg);
+}
+.card p{
+    padding: 10px;
+}
+.card a{
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 15px 15px;
+    text-decoration: none;
+}
+.card:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+.home{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 0 15%;
+    
+}
+.home-content{
+  max-width: 600px;
+}
+
+.home-content h2{
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: lightgray;
+
+}
+.home-content h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    
+}
+.home-content p{
+    font-size: 1rem;
+    margin: 10px 0 10px;
+    color:whitesmoke;
+}
+.button-box{
+    width: 300px;
+    height: 30px;
+    position: relative;
+
+}
+.button-box a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'open-sans';
+    width: 100px;
+    height: 100%;
+    background: lightgray;
+    border: 2px solid  lightgray;
+    border-radius: 8px;
+    color: #081b29;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    transition: .5s;
+
+
+}.button-box a::before{
+    content: '';
+    height: 100%;
+    width: 0px;
+    border-radius: 2px;
+    background: #081b29;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition:.5s;
+}
+.button-box a:hover::before{
+    width: 100%;
+}
+.button-box a:hover{
+    color: whitesmoke;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:548px){
+.container{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; 
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 200px;
+    background-color: inherit;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.7s ease-in-out;
+
+}
+nav a{
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding:20px 30px;
+    justify-content: flex-start;
+    
+   
+}
+.open-sidebar,.close-sidebar{
+    display: block;
+    padding: 20px;
+}
+nav .logo{
+  margin-right: auto;
+}
+#sidebar:checked ~ .container{
+   right: 0;
+}
+
+}
